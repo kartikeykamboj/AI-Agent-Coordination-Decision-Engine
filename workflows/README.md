@@ -1,3 +1,0 @@
-# Workflows
-
-Agent coordination workflows.
