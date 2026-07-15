@@ -1,12 +1,13 @@
 # AI Agent Coordination & Decision Engine
 
-> Infosys Springboard Virtual Internship 7.0  
-> Milestone 1 - Agent Foundation Development
+> Infosys Springboard Virtual Internship 7.0
+> **Milestone 1 – Multi-Agent Foundation Development**
 
 ![Python](https://img.shields.io/badge/Python-3.14-blue?style=for-the-badge&logo=python)
 ![LangChain](https://img.shields.io/badge/LangChain-Framework-success?style=for-the-badge)
 ![Gemini](https://img.shields.io/badge/Google-Gemini-orange?style=for-the-badge&logo=google)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-Passing-brightgreen?style=for-the-badge&logo=githubactions)
 
 ---
 
@@ -25,25 +26,34 @@ This repository contains the implementation completed during **Milestone 1** of 
 - Configure LangChain and required dependencies
 - Develop foundational AI agents
 - Implement prompt templates
-- Build coordinator and orchestration workflow
-- Integrate Gemini LLM
-- Establish project architecture
-- Create testing framework
+- Build Coordinator and Workflow Orchestrator
+- Develop specialized Planner, Research and Decision Agents
+- Implement intelligent multi-agent routing
+- Integrate Google Gemini LLM
+- Implement short-term memory management
+- Establish enterprise-ready project architecture
+- Create unit testing framework
+- Configure GitHub Actions CI pipeline
 - Prepare project documentation
 
 ---
 
 # Features Implemented
 
-- Coordinator Agent
 - Workflow Orchestrator
+- Coordinator Agent
+- Planner Agent
+- Research Agent
+- Decision Agent
+- Intelligent Multi-Agent Routing
 - Prompt Template Management
 - Gemini API Integration
 - LangChain Integration
 - Memory Manager (Short-Term Memory)
-- Modular Project Structure
-- Unit Test Framework
-- GitHub Actions Workflow
+- Enterprise Modular Architecture
+- Unit Test Framework (Pytest)
+- GitHub Actions Continuous Integration
+- Comprehensive Project Documentation
 - MIT Licensed Repository
 
 ---
@@ -51,24 +61,30 @@ This repository contains the implementation completed during **Milestone 1** of 
 # Current Architecture
 
 ```text
-                User
-                  │
-                  ▼
-        Workflow Orchestrator
-                  │
-                  ▼
-         Coordinator Agent
-                  │
-        Prompt Engineering Layer
-                  │
-                  ▼
-          Gemini Large Language Model
-                  │
-                  ▼
-         Response Generation Engine
-                  │
-                  ▼
-          Memory Management Layer
+                     User
+                       │
+                       ▼
+             Workflow Orchestrator
+                       │
+                       ▼
+              Coordinator Agent
+                       │
+      ┌────────────────┼────────────────┐
+      ▼                ▼                ▼
+ Research Agent   Planner Agent   Decision Agent
+      │                │                │
+      └────────────────┼────────────────┘
+                       ▼
+             Prompt Engineering Layer
+                       │
+                       ▼
+             Google Gemini LLM
+                       │
+                       ▼
+                Memory Manager
+                       │
+                       ▼
+                Final Response
 ```
 
 ---
@@ -90,14 +106,20 @@ AI-Agent-Coordination-Decision-Engine
 │
 ├── src/
 │   ├── agents/
+│   │   ├── coordinator.py
+│   │   ├── planner.py
+│   │   ├── researcher.py
+│   │   └── decision_agent.py
 │   ├── memory/
 │   ├── prompts/
 │   ├── tools/
 │   ├── workflow/
+│   │   └── orchestrator.py
 │   └── app.py
 │
 ├── tests/
 │
+├── CHANGELOG.md
 ├── README.md
 ├── requirements.txt
 ├── LICENSE
@@ -112,6 +134,9 @@ AI-Agent-Coordination-Decision-Engine
 - LangChain
 - Google Gemini API
 - Prompt Engineering
+- Multi-Agent Architecture
+- Workflow Orchestration
+- Memory Management
 - Git & GitHub
 - GitHub Actions
 - VS Code
@@ -123,11 +148,13 @@ AI-Agent-Coordination-Decision-Engine
 
 1. User submits a request.
 2. Workflow Orchestrator receives the request.
-3. Coordinator Agent analyzes the task.
-4. Prompt Template prepares the instruction.
-5. Gemini LLM generates the response.
-6. Memory Manager stores the interaction.
-7. Final response is returned to the user.
+3. Coordinator Agent analyses the request.
+4. Coordinator intelligently routes the request to the appropriate specialized AI agent.
+5. Planner, Research or Decision Agent processes the task.
+6. Prompt Template prepares the instruction.
+7. Google Gemini LLM generates the response.
+8. Memory Manager stores the interaction.
+9. Final response is returned to the user.
 
 ---
 
@@ -171,38 +198,47 @@ pytest
 
 # Future Enhancements
 
-- Multi-Agent Collaboration
-- Planner Agent
-- Research Agent
-- Decision Support Agent
+- Agent-to-Agent Communication
 - Tool Calling
 - REST API Integration
 - Vector Database Memory
+- Long-Term Memory
+- Retrieval-Augmented Generation (RAG)
 - Enterprise Workflow Automation
 - Dashboard & Monitoring
-- Multi-Agent Communication
+- Authentication & Role-Based Access
+- External API Integrations
 
 ---
 
 # Internship Mapping
 
-| Milestone Requirement | Status |
-|-----------------------|--------|
+| Milestone Requirement   | Status      |
+| ----------------------- | ----------- |
 | LangChain Configuration | ✅ Completed |
-| Foundational Agent | ✅ Completed |
-| Prompt Templates | ✅ Completed |
-| Testing Framework | ✅ Completed |
-| Coordinator Agent | ✅ Completed |
-| Workflow Orchestration | ✅ Completed |
-| Memory Foundation | ✅ Completed |
+| Foundational AI Agents  | ✅ Completed |
+| Prompt Templates        | ✅ Completed |
+| Workflow Orchestrator   | ✅ Completed |
+| Coordinator Agent       | ✅ Completed |
+| Planner Agent           | ✅ Completed |
+| Research Agent          | ✅ Completed |
+| Decision Agent          | ✅ Completed |
+| Multi-Agent Routing     | ✅ Completed |
+| Memory Foundation       | ✅ Completed |
+| Testing Framework       | ✅ Completed |
+| GitHub Actions CI       | ✅ Completed |
+| Documentation           | ✅ Completed |
+
 
 ---
 
 # Repository Status
 
-**Current Phase:** Milestone 1 completed (foundation) with a working Coordinator Agent, Workflow Orchestrator, LangChain integration, and Gemini-powered response generation.
+**Current Phase:** Milestone 1 successfully completed.
 
-The project establishes a modular enterprise-ready architecture for developing collaborative AI agent ecosystems.
+The project includes a Workflow Orchestrator, Coordinator Agent, Planner Agent, Research Agent, Decision Agent, intelligent multi-agent routing, LangChain integration, Google Gemini API integration, Memory Manager, unit testing framework, GitHub Actions CI pipeline, and comprehensive project documentation.
+
+The repository establishes a scalable enterprise-ready architecture for future multi-agent collaboration, tool integration, and intelligent workflow automation.
 
 ---
 
@@ -210,7 +246,7 @@ The project establishes a modular enterprise-ready architecture for developing c
 
 **Kartikey Kamboj**
 
-B.Tech Computer Science Engineering (Twinning)
+Intern
 
 Infosys Springboard Virtual Internship 7.0
 
